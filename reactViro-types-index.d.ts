@@ -1,8 +1,8 @@
-
+// React Viro types
+// https://github.com/viromedia/viro/issues/621
 declare module 'react-viro' {
   // Imports
   import { Component } from "react";
-  
   /* ##### DEPRECATION WARNING - ViroSceneNavigator may be removed in future releases. Use ViroVRSceneNavigator instead #####
   ViroSceneNavigator is used to transition between multiple scenes. */
   interface ViroSceneNavigatorProps {
@@ -29,7 +29,7 @@ declare module 'react-viro' {
     Note that the back history order of which scenes were pushed is preserved.
     Also note that scenes are reference counted and only a unique set of
     scenes are stored and mapped to within sceneDictionary.
-    
+
     Can take in either 1 or two parameters in the form:
     push ("sceneKey");
     push ("sceneKey", scene);
@@ -37,7 +37,7 @@ declare module 'react-viro' {
     public push(param1:any, param2:any):any;
     /* Replace the top scene in the stack with the given scene. The remainder of the back
     history is kept in the same order as before.
-    
+
     Can take in either 1 or two parameters in the form:
     replace ("sceneKey");
     replace ("sceneKey", scene);
@@ -46,7 +46,7 @@ declare module 'react-viro' {
     /* Jumps to a given scene that had been previously pushed. If the scene was not pushed, we
     then push and jump to it. The back history is re-ordered such that jumped to scenes are
     re-ordered to the front. As such, only the back order of sequential jumps are preserved.
-    
+
     Can take in either 1 or two parameters in the form:
     jump ("sceneKey");
     jump ("sceneKey", scene);
@@ -74,7 +74,6 @@ declare module 'react-viro' {
     public popHistoryByN(n:any):any;
     public getSceneIndex(sceneTag:any):any;
   }
-  
   interface ViroSceneProps {
     onHover?:Function
     onClick?:Function
@@ -103,7 +102,7 @@ declare module 'react-viro' {
     public getCameraPositionAsync():Promise<any>;
     public getCameraOrientationAsync():Promise<any>;
   }
-  
+
   interface ViroBoxProps {
     position?:number[]
     scale?:number[]
@@ -139,11 +138,11 @@ declare module 'react-viro' {
     This can be useful for complex 3D objects where the default
     checking method of bounding boxes do not provide adequate
     collision detection coverage.
-    
+
     NOTE: Enabling high accuracy event collision checks has a high
     performance cost and should be used sparingly / only when
     necessary.
-    
+
     Flag is set to false by default. */
     highAccuracyEvents?:boolean
     highAccuracyGaze?:boolean
@@ -159,9 +158,9 @@ declare module 'react-viro' {
     public setVelocity(velocity:any):any;
     public setNativeProps(nativeProps:any):any;
   }
-  
+
   export const ViroMaterials:any;
-  
+
   interface ViroMaterialVideoProps {
     material?:string
     paused?:boolean
@@ -188,7 +187,7 @@ declare module 'react-viro' {
     public setNativeProps(nativeProps:any):any;
     public seekToTime(timeInSeconds:any):any;
   }
-  
+
   interface ViroVideoProps {
     position?:number[]
     rotation?:number[]

@@ -23,7 +23,7 @@ var AR_NAVIGATOR_TYPE = 'AR';
 // be presented with a choice of AR or VR. By default, we offer the user a choice.
 var defaultNavigatorType = UNSET;
 
-const ViroSample = () => {
+const App: React.FunctionComponent<any> = () => {
     const [navigatorType, setNavigatorType] = React.useState('UNSET');
     const [sharedProps, setSharedProps] = React.useState();
 
@@ -135,4 +135,4 @@ var localStyles = StyleSheet.create({
     }
 });
 
-export default ViroSample;
+export default App;
