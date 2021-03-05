@@ -32,6 +32,16 @@ const ViroSample = () => {
         return <ViroARSceneNavigator {...sharedProps} initialScene={{ scene: InitialARScene }} />;
     };
 
+    const getVRNavigator = () => {
+        return (
+            <ViroVRSceneNavigator
+                {...sharedProps}
+                initialScene={{ scene: InitialVRScene }}
+                onExitViro={exitViro}
+            />
+        );
+    };
+
     // This function returns an anonymous/lambda function to be used
     // by the experience selector buttons
     const getExperienceButtonOnPress = (navigatorType) => {

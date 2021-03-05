@@ -6,7 +6,7 @@ import { StyleSheet } from 'react-native';
 import { ViroARScene, ViroText, ViroConstants, ViroBox } from 'react-viro';
 
 const HelloWorldSceneAR = () => {
-    const [text, setTest] = React.useState('Initializing AR...');
+    const [text, setTest] = React.useState<string>('Initializing AR...');
 
     const onInitialized = (state, reason) => {
         if (state == ViroConstants.TRACKING_NORMAL) {
